@@ -4,43 +4,38 @@ export default function AboutPage() {
       <section className="mx-auto w-full max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-link">About</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
-          TaaTatu Hub Limited
+          Who We Are
         </h1>
-        <p className="mt-5 max-w-3xl text-lg text-foreground">
-          We are an African export partner focused on FMCG distribution with operational
-          discipline, predictable delivery, and trade certainty at every stage of execution.
+        <p className="mt-5 max-w-4xl text-lg text-foreground">
+          TaaTatu Hub Limited is built on a simple principle: buyers return when supply is
+          consistent and execution is disciplined. We connect qualified African producers to
+          importers and distributors who value predictable performance, commercially and
+          operationally.
+        </p>
+        <p className="mt-4 max-w-4xl text-sm leading-6 text-foreground">
+          Africa to the World. Africa to Africa. Export-ready supply, delivered with discipline.
         </p>
       </section>
 
       <section className="mx-auto w-full max-w-[85rem] px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-2">
+        <h2 className="text-2xl font-semibold text-heading sm:text-3xl">Our Focus</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
           <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-heading">How We Operate</h2>
-            <p className="mt-3 text-sm leading-6 text-foreground">
-              We run structured workflows across supplier selection, compliance preparation,
-              logistics coordination, and buyer communication. Every shipment follows a documented
-              path with defined controls.
+            <h3 className="text-lg font-semibold text-heading">Export-ready products</h3>
+            <p className="mt-2 text-sm text-foreground">
+              Products that travel well and distribute well across global and regional channels.
             </p>
           </article>
           <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-heading">Export Philosophy</h2>
-            <p className="mt-3 text-sm leading-6 text-foreground">
-              Our philosophy is simple: disciplined decisions create reliable outcomes. We focus on
-              transparency, precision, and execution certainty for long-term trade relationships.
+            <h3 className="text-lg font-semibold text-heading">Clear documentation alignment</h3>
+            <p className="mt-2 text-sm text-foreground">
+              Shipment terms and document packs coordinated to reduce delays and clearance risk.
             </p>
           </article>
           <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-heading">Focus on Discipline</h2>
-            <p className="mt-3 text-sm leading-6 text-foreground">
-              We standardize key controls before orders are confirmed to reduce rework and prevent
-              avoidable shipment risk.
-            </p>
-          </article>
-          <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-heading">Focus on Certainty</h2>
-            <p className="mt-3 text-sm leading-6 text-foreground">
-              Buyers receive clear commitments, milestone communication, and traceable execution
-              from sourcing through final delivery.
+            <h3 className="text-lg font-semibold text-heading">Long-term buyer relationships</h3>
+            <p className="mt-2 text-sm text-foreground">
+              Relationships built on consistency in quality, timelines, and execution structure.
             </p>
           </article>
         </div>

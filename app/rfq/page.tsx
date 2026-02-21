@@ -7,7 +7,8 @@ export default function RfqPage() {
           Request a Quote
         </h1>
         <p className="mt-5 max-w-3xl text-lg text-foreground">
-          Submit a structured trade request so our team can prepare a clear and actionable offer.
+          Share your destination market, required SKUs, volumes, and preferred Incoterms. We will
+          respond with availability, pricing, lead times, and shipment options.
         </p>
       </section>
 
@@ -15,70 +16,55 @@ export default function RfqPage() {
         <form className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm sm:p-8">
           <div className="grid gap-4 md:grid-cols-2">
             <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Company Name
+              Destination country, city, or port
               <input
-                name="companyName"
+                name="destination"
                 type="text"
                 required
                 className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
               />
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Contact Person
-              <input
-                name="contactPerson"
-                type="text"
-                required
-                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
-              />
-            </label>
-            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Email
-              <input
-                name="email"
-                type="email"
-                required
-                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
-              />
-            </label>
-            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Phone
-              <input
-                name="phone"
-                type="tel"
-                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
-              />
-            </label>
-            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Destination Country
-              <input
-                name="destinationCountry"
-                type="text"
-                required
-                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
-              />
-            </label>
-            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Product Category
+              Product category
               <select
                 name="productCategory"
                 required
                 className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
               >
                 <option value="">Select a category</option>
-                <option value="non-alcoholic-beverages">Non-Alcoholic Beverages</option>
-                <option value="long-shelf-life-fmcg">Long Shelf-Life FMCG</option>
-                <option value="private-label">Private Label</option>
+                <option value="beverages">Beverages</option>
+                <option value="fmcg">FMCG</option>
+                <option value="both">Both</option>
               </select>
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Incoterm
+              SKUs and pack sizes
+              <input
+                name="skusPackSizes"
+                type="text"
+                required
+                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
+              Quantity and frequency
+              <input
+                name="quantityFrequency"
+                type="text"
+                required
+                className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-sm font-medium text-heading">
+              Preferred Incoterms
               <select
                 name="incoterm"
+                required
                 className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
               >
                 <option value="">Select incoterm</option>
                 <option value="EXW">EXW</option>
+                <option value="FCA">FCA</option>
                 <option value="FOB">FOB</option>
                 <option value="CFR">CFR</option>
                 <option value="CIF">CIF</option>
@@ -86,29 +72,29 @@ export default function RfqPage() {
               </select>
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium text-heading">
-              Estimated Volume
+              Target delivery window
               <input
-                name="volume"
+                name="deliveryWindow"
                 type="text"
-                placeholder="e.g. 1 x 20ft container monthly"
+                required
                 className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
               />
             </label>
           </div>
 
           <label className="mt-4 flex flex-col gap-2 text-sm font-medium text-heading">
-            Packaging / Specification Requirements
+            Label language and compliance requirements
             <textarea
-              name="packagingRequirements"
+              name="labelCompliance"
               rows={4}
               className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
             />
           </label>
 
           <label className="mt-4 flex flex-col gap-2 text-sm font-medium text-heading">
-            Additional Notes
+            Notes or attachments
             <textarea
-              name="notes"
+              name="notesAttachments"
               rows={4}
               className="rounded-lg border border-neutral-light bg-white px-3 py-2 text-foreground outline-none ring-brand-teal/40 focus:ring-2"
             />
