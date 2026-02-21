@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "African FMCG Exporter",
+  description:
+    "TaaTatu Hub is an African FMCG exporter and African beverage supplier connecting importers to export-ready African products with structured trade execution.",
+};
 
 export default function HomePage() {
   return (
@@ -15,10 +22,10 @@ export default function HomePage() {
                 Export-ready African products. Delivered with trade discipline.
               </h1>
               <p className="hero-fade-up hero-fade-up-delay-2 mt-4 max-w-3xl text-base text-on-navy/90 md:text-xl">
-                TaaTatu Hub Limited is a trade company connecting Africa&apos;s leading
-                non-alcoholic beverages and long shelf-life FMCG to global importers and
-                intra-African buyers through structured sourcing, documentation coordination, and
-                shipment execution.
+                TaaTatu Hub Limited is an African FMCG exporter and African beverage supplier
+                connecting Africa&apos;s leading non-alcoholic beverages and long shelf-life FMCG
+                to global importers and intra-African buyers through structured sourcing,
+                documentation coordination, and shipment execution.
               </p>
               <div className="hero-fade-up hero-fade-up-delay-2 mt-6 flex flex-wrap gap-3">
                 <Link
@@ -40,7 +47,9 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto w-full max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-semibold text-heading sm:text-3xl">What We Supply</h2>
+        <h2 className="text-2xl font-semibold text-heading sm:text-3xl">
+          Export-Ready African Product Supply
+        </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-heading">Non-Alcoholic Beverages</h3>

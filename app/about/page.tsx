@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "African Sourcing Hub",
+  description:
+    "TaaTatu Hub is an African export company and sourcing hub built for certainty in supply, documentation, timelines, and execution.",
+};
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
@@ -13,6 +21,11 @@ export default function AboutPage() {
           operationally.
         </p>
         <p className="mt-4 max-w-4xl text-sm leading-6 text-foreground">
+          As an African export company and sourcing hub, we run practical trade workflows covering
+          Incoterms alignment, freight consolidation, certificate of origin coordination, and
+          export documentation accuracy.
+        </p>
+        <p className="mt-3 max-w-4xl text-sm leading-6 text-foreground">
           Africa to the World. Africa to Africa. Export-ready supply, delivered with discipline.
         </p>
       </section>

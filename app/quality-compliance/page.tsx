@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Export Quality & Compliance",
+  description:
+    "Supplier verification, packaging standards, traceability, and export documentation alignment for African FMCG trade.",
+};
+
 export default function QualityCompliancePage() {
   return (
     <main className="min-h-screen bg-background">
