@@ -2,26 +2,112 @@
 @source "../node_modules/preline/dist/*.js";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-navy: #1f2747;
+  --brand-teal: #22979b;
+  --brand-yellow: #f1b211;
+  --brand-orange: #ff8126;
+  --brand-navy-dark: #161e3a;
+  --neutral-light: #e9e9e9;
+  --white: #ffffff;
+  --text-body: #2c2c2c;
+
+  /* Light mode (default) */
+  --background: var(--white);
+  --foreground: var(--text-body);
+  --heading: var(--brand-navy);
+  --link: var(--brand-teal);
+  --surface-soft: var(--neutral-light);
+  --surface-card: var(--white);
+
+  /* Buttons and interactive states */
+  --button-primary-bg: var(--brand-navy);
+  --button-primary-fg: var(--white);
+  --button-primary-hover-bg: var(--brand-navy-dark);
+  --button-secondary-bg: var(--brand-teal);
+  --button-secondary-fg: var(--white);
+  --accent-yellow: var(--brand-yellow);
+  --accent-orange: var(--brand-orange);
+
+  /* Hero and gradient accents */
+  --hero-bg: var(--brand-navy);
+  --hero-headline: var(--white);
+  --hero-subtext: var(--neutral-light);
+  --hero-cta-primary: var(--brand-teal);
+  --hero-cta-secondary: var(--brand-orange);
+  --hero-decorative-yellow-10: rgb(241 178 17 / 10%);
+  --hero-decorative-orange-10: rgb(255 129 38 / 10%);
+  --gradient-brand: linear-gradient(135deg, #22979b 0%, #1f2747 100%);
+
+  /* Accessibility pairing helpers */
+  --on-navy: var(--white);
+  --on-navy-dark: var(--white);
+  --on-teal: var(--white);
+  --on-yellow: var(--brand-navy);
+  --on-orange: var(--brand-navy);
+
   --font-family-primary: "Raleway", sans-serif;
   --font-family-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --neutral-light: #2a355f;
+  --background: #161e3a;
+  --foreground: #e9e9e9;
+  --heading: #ffffff;
+  --link: #22979b;
+  --surface-soft: #1f2747;
+  --surface-card: #1b2444;
+  --button-primary-bg: #22979b;
+  --button-primary-fg: #ffffff;
+  --button-primary-hover-bg: #1f2747;
+  --button-secondary-bg: #ff8126;
+  --button-secondary-fg: #1f2747;
+  --hero-bg: #161e3a;
+  --hero-headline: #ffffff;
+  --hero-subtext: #e9e9e9;
+  --on-navy: #ffffff;
+  --on-navy-dark: #ffffff;
+  --on-teal: #ffffff;
+  --on-yellow: #1f2747;
+  --on-orange: #1f2747;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-link: var(--link);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-navy-dark: var(--brand-navy-dark);
+  --color-neutral-light: var(--neutral-light);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-card: var(--surface-card);
+  --color-button-primary-bg: var(--button-primary-bg);
+  --color-button-primary-fg: var(--button-primary-fg);
+  --color-button-primary-hover-bg: var(--button-primary-hover-bg);
+  --color-button-secondary-bg: var(--button-secondary-bg);
+  --color-button-secondary-fg: var(--button-secondary-fg);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-orange: var(--accent-orange);
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-headline: var(--hero-headline);
+  --color-hero-subtext: var(--hero-subtext);
+  --color-hero-cta-primary: var(--hero-cta-primary);
+  --color-hero-cta-secondary: var(--hero-cta-secondary);
+  --color-on-navy: var(--on-navy);
+  --color-on-navy-dark: var(--on-navy-dark);
+  --color-on-teal: var(--on-teal);
+  --color-on-yellow: var(--on-yellow);
+  --color-on-orange: var(--on-orange);
   --font-sans: var(--font-family-primary);
   --font-mono: var(--font-family-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -29,6 +115,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-family-primary);
   font-optical-sizing: auto;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 html {
@@ -45,4 +132,35 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-up {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease-out forwards;
+}
+
+.hero-fade-up-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.hero-fade-up-delay-2 {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up {
+    opacity: 1;
+    animation: none;
+  }
 }

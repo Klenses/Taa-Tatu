@@ -4,8 +4,13 @@ import { PrelineProvider } from "@/components/providers/preline-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Klenses NextJS Starter",
-  description: "Klenses website template for building production pages quickly",
+  title: "TaaTatu Hub Limited",
+  description: "TaaTatu Hub Limited website for building production pages quickly",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

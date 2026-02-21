@@ -1,70 +1,52 @@
-import { HomeIcon, SparklesIcon, WrenchScrewdriverIcon } from "@/components/icons";
-import { InteractionDemo } from "@/components/home/interaction-demo";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-sky-50 to-white">
-      <section className="mx-auto w-full max-w-[85rem] px-4 pt-20 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-x-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-700">
-            Klenses Website Template
-          </span>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
-            Klenses
-          </h1>
-          <p className="mt-4 text-lg text-zinc-600">
-            This template is used by Klenses to create websites fast,
-            with reusable sections, accessible interactions, and smooth motion defaults.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a
-              className="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-zinc-900 px-4 py-3 text-sm font-medium text-white hover:bg-zinc-800 focus:bg-zinc-800"
-              href="#features"
-            >
-              View template sections
-            </a>
-            <a
-              className="inline-flex items-center gap-x-2 rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 focus:bg-zinc-50"
-              href="#interaction"
-            >
-              See interaction patterns
-            </a>
+    <main className="min-h-screen bg-background">
+      <section className="h-[100dvh] px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto h-full max-w-[85rem] overflow-hidden rounded-2xl bg-[url('/hero_taatatu.png')] bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/75 via-brand-navy/55 to-brand-navy/35" />
+          <div className="relative mt-auto flex h-full flex-col justify-end">
+            <div className="w-[88%] pb-6 ps-5 md:max-w-3xl md:pb-10 md:ps-10">
+              <p className="hero-fade-up text-sm font-semibold uppercase tracking-[0.16em] text-on-navy/85">
+                TaaTatu Hub Limited
+              </p>
+              <h1 className="hero-fade-up hero-fade-up-delay-1 mt-3 text-3xl font-semibold text-on-navy md:text-5xl lg:text-6xl">
+                African FMCG Exporter for Structured Trade Execution
+              </h1>
+              <p className="hero-fade-up hero-fade-up-delay-2 mt-4 max-w-2xl text-base text-on-navy/90 md:text-xl">
+                Export-ready beverages and long shelf-life FMCG delivered with disciplined trade
+                coordination and reliable logistics execution.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="features" className="mx-auto mt-14 w-full max-w-[85rem] px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-3">
-          <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <HomeIcon className="h-8 w-8 text-zinc-700" />
-            <h2 className="mt-4 text-lg font-semibold text-zinc-900">Ready-Made Sections</h2>
-            <p className="mt-2 text-sm text-zinc-600">
-              Start with reusable hero, feature, and CTA blocks that Klenses can adapt per
-              client in minutes.
+      <section className="mx-auto w-full max-w-[85rem] px-4 py-14 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-semibold text-heading sm:text-3xl">How We Execute Trade</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-heading">Sourcing Discipline</h3>
+            <p className="mt-2 text-sm text-foreground">
+              We verify supplier capability and align product specifications to buyer requirements
+              before execution begins.
             </p>
           </article>
-          <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <SparklesIcon className="h-8 w-8 text-zinc-700" />
-            <h2 className="mt-4 text-lg font-semibold text-zinc-900">Accessible Interaction</h2>
-            <p className="mt-2 text-sm text-zinc-600">
-              Keep interaction behavior accessible and consistent while staying fully in control
-              of branding and styling.
+          <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-heading">Documentation Certainty</h3>
+            <p className="mt-2 text-sm text-foreground">
+              Trade documentation is coordinated upfront to reduce clearance risk and maintain
+              shipment continuity.
             </p>
           </article>
-          <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <WrenchScrewdriverIcon className="h-8 w-8 text-zinc-700" />
-            <h2 className="mt-4 text-lg font-semibold text-zinc-900">Polished Motion Defaults</h2>
-            <p className="mt-2 text-sm text-zinc-600">
-              Ship subtle animation presets for entrances and state changes so every new site
-              feels modern out of the box.
+          <article className="rounded-2xl border border-neutral-light bg-surface-card p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-heading">Shipment Control</h3>
+            <p className="mt-2 text-sm text-foreground">
+              We coordinate logistics milestones and status reporting so buyers have visibility
+              from booking to delivery.
             </p>
           </article>
         </div>
       </section>
-
-      <div id="interaction">
-        <InteractionDemo />
-      </div>
     </main>
   );
 }

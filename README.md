@@ -1,6 +1,6 @@
-# Klenses Next.js Starter
+# TaaTatu Hub Limited Website
 
-A production-oriented website template used by Klenses to build and ship sites quickly.
+A production-oriented website for TaaTatu Hub Limited to build and ship sites quickly.
 
 ## Stack
 - Next.js 16 (App Router) + React 19 + TypeScript
@@ -13,13 +13,16 @@ A production-oriented website template used by Klenses to build and ship sites q
 ## Routes
 - `/`: marketing homepage
 - `/about`: about page
-- `/dashboard`: dashboard overview (custom nested layout)
-- `/dashboard/list`: dashboard list view (same dashboard layout)
+- `/products`: products page
+- `/services`: services page
+- `/quality-compliance`: quality and compliance page
+- `/logistics`: logistics page
+- `/rfq`: request a quote page
+- `/contact`: contact page
 
 ## Project Structure
 - `app/`: routes and layouts
 - `components/layout/`: shared site layout (`navbar.tsx`, `footer.tsx`, `layout.tsx`)
-- `components/home/`: homepage sections
 - `components/providers/`: runtime providers (Preline init)
 - `components/icons.tsx`: centralized Heroicons wrapper
 
@@ -41,7 +44,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Layout Behavior
 - Root layout (`app/layout.tsx`) applies fonts, providers, and the main website layout.
-- Dashboard routes use `app/dashboard/layout.tsx`, which overrides only the dashboard subtree layout.
 
 ## Notes
 - Font family and fallback behavior are configured in `app/layout.tsx` and `app/globals.css`.
@@ -73,8 +75,8 @@ docker compose down
 Build and run the production container:
 
 ```bash
-docker build -t klenses-nextjs-starter .
-docker run --rm -p 3000:3000 klenses-nextjs-starter
+docker build -t taatatu-hub-limited-site .
+docker run --rm -p 3000:3000 taatatu-hub-limited-site
 ```
 
 Then open `http://localhost:3000`.
