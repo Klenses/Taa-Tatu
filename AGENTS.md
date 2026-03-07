@@ -8,9 +8,10 @@
 - `public/`: static assets served from `/` (icons, SVGs, images).
 - `components/layout/`: main website layout primitives (`navbar.tsx`, `footer.tsx`, `layout.tsx`).
 - `components/providers/`: client-side initializers.
+- `components/<page>/`: page-specific section components (for example `components/home/hero-section.tsx`, `components/rfq/form-section.tsx`).
 - Build output: `.next/` (generated; do not edit).
 
-Keep route-specific UI close to each route segment and use `@/*` imports.
+Route `page.tsx` files should compose section components from `components/<page>/` and keep SEO metadata/schema concerns at route level. Use `@/*` imports.
 
 ## Build, Test, and Development Commands
 - `npm run dev`: start local dev server.

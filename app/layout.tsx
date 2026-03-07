@@ -5,10 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://taatatuhub.com"),
-  title: {
-    default: "African FMCG Exporter | TaaTatu Hub",
-    template: "%s | TaaTatu Hub",
-  },
+  title: "TaaTatu Hub",
   description:
     "TaaTatu Hub is an African beverage supplier and FMCG exporter delivering export-ready products with disciplined sourcing, documentation, and logistics.",
   icons: {
@@ -17,7 +14,7 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "African FMCG Exporter | TaaTatu Hub",
+    title: "TaaTatu Hub",
     description:
       "Export-ready African products for global and intra-African buyers with structured trade execution.",
     type: "website",
@@ -34,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "African FMCG Exporter | TaaTatu Hub",
+    title: "TaaTatu Hub",
     description:
       "Export-ready African products delivered with structured sourcing, compliance, and logistics discipline.",
     images: ["/opengraph-image"],

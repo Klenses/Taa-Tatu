@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "TaaTatu Hub Limited - African FMCG Export Supply";
+export const alt = "TaaTatu Hub Limited";
 export const size = {
   width: 1200,
   height: 630,
